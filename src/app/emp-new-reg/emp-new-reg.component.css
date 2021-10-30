@@ -1,0 +1,128 @@
+
+
+/* new */
+
+body-wrapper {
+  width: 100%;
+  height: 85%;
+  padding: 20px 10px;
+}
+
+.body-wrapper .panel .aside .list {
+  width: 100%;
+  height: auto;
+
+  text-align: left;
+  padding-right: 18px;
+  box-sizing: border-box;
+  font-size: 11px;
+  font-family: "Lato";
+  color: #114350;
+}
+
+.body-wrapper .panel {
+  width: 90%;
+  height: 90%;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px 5px rgba(7, 7, 7, 0.452);
+  overflow: hidden;
+  margin: 20px;
+}
+
+.body-wrapper .card {
+  margin: 150px;
+  padding: 10px 20px;
+
+  background: #0a0901c4;
+  color: rgb(210, 218, 226);
+  box-shadow: 10px 10px 10px rgba(255, 255, 254, 0.637);
+}
+
+th{
+  color: aquamarine;
+}
+td {
+  color: aliceblue;
+}
+
+.card-header {
+  background: #fdfdfdd8;
+  color: rgb(1, 0, 3);
+  height: 70px;
+  width: 90%;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.637);
+  font-size: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.body-wrapper .panel .aside .list .item:hover {
+  color: #114350;
+}
+.body-wrapper .panel .aside .list .item.selected {
+  font-weight: bold;
+}
+.body-wrapper .panel .aside .list .item.selected::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -14px;
+  width: 3px;
+  height: 23px;
+  background: #114350;
+}
+
+.body-wrapper .panel .aside {
+  width: 83px;
+  height: 600px;
+  float: left;
+  margin-left: 5px;
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.body-wrapper .panel .aside .list .item {
+  height: 30px;
+  line-height: 23px;
+  width: 95%;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #114350;
+  margin-top: 20px;
+  font-size: 12px;
+  margin-right: 30px;
+}
+
+.body-wrapper .avatar {
+  margin-left: 10px;
+}
+
+.background {
+  background: #033441cc;
+}
+
+.body-wrapper .card-header {
+  height: 50%;
+  width: 20%;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+/* making responsive */
+@media (min-width: 568px) {
+  .body-wrapper {
+    width: 100%;
+    height: 85%;
+    padding: 10px 10px;
+  }
+
+}

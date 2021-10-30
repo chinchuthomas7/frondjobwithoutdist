@@ -1,0 +1,230 @@
+
+  
+
+
+
+body {
+  background: #e2e1e0;
+  text-align: center;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+ 
+  border-radius: 2px;
+  display: inline-block;
+  height: 90%;
+
+  /* position: relative; */
+align-items: center;
+  width: 50%;
+
+  margin-top: 50px;
+  margin-left: 25%;
+  margin-bottom: 50px;
+}
+
+.card{
+  border-radius: 20px;
+  /* text-align: center; */
+  justify-content: right;
+  
+}
+
+
+
+.card-4 {
+  box-shadow: 0 14px 20px rgba(73, 255, 36, 0.507), 0 10px 10px rgba(30, 177, 221, 0.22), 0 2px rgba(40, 210, 216, 0.25);
+  
+}
+h4{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(47, 139, 245);
+  /* text-align: center; */
+  margin-top: 15px;
+}
+
+.entire{
+  background: rgba(11, 44, 71, 0.568);
+}
+
+h6{
+  margin: 20px;
+ 
+}
+
+.about,.job{
+  margin: 30px;
+  padding: 10px;
+}
+
+/* button */
+
+.btn {
+  text-align: center;
+margin-left: 40% ;
+}
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+
+
+
+ .btn-10 {
+  background: rgb(9, 148, 240);
+background: linear-gradient(0deg, rgb(132, 240, 9) 0%, rgba(49,110,244,1) 100%);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-10:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(.1);
+  transform: scale(.1);
+}
+.btn-10:hover {
+  color: rgb(37, 194, 17);
+  border: none;
+  background: transparent;
+}
+.btn-10:hover:after {
+  background: rgba(0, 255, 149, 0.623);
+background: linear-gradient(0deg, rgba(2,126,251,1) 0%,  rgb(187, 9, 178)100%);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* button 8 */
+
+.btn-8{
+  background: rgb(225, 240, 9);
+background: linear-gradient(0deg, rgb(240, 9, 228) 0%, rgb(244, 49, 163) 100%);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-8:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(.1);
+  transform: scale(.1);
+}
+.btn-8:hover {
+  color: rgb(194, 17, 76);
+  border: none;
+  background: transparent;
+}
+.btn-8:hover:after {
+  background: rgba(0, 255, 149, 0.623);
+background: linear-gradient(0deg, rgba(2,126,251,1) 0%,  rgb(187, 9, 178)100%);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* button 9 */
+
+.btn-9 {
+  background: rgb(247, 116, 9);
+background: linear-gradient(0deg, rgb(240, 217, 9) 0%, rgb(244, 127, 49) 100%);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-9:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(.1);
+  transform: scale(.1);
+}
+.btn-9:hover {
+  color: rgb(238, 117, 4);
+  border: none;
+  background: transparent;
+}
+.btn-9:hover:after {
+  background: rgba(0, 255, 149, 0.623);
+background: linear-gradient(0deg, rgba(2,126,251,1) 0%,  rgb(187, 9, 178)100%);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* applicants list */
+
+.names{
+ margin-left: 30px;
+
+}
+
+h5{
+  margin-left: 30px;
+  margin-right: 2px;
+
+ margin-top: 5px;
+ color: rgb(67, 126, 9);
+}
+
+
+
+
+
+
+
+  
+ 
+
+
+
+
+
+
+
+
+
+  

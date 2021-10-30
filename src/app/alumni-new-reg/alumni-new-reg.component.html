@@ -1,0 +1,69 @@
+
+
+<body>
+    <div class="background">
+    <div class="body-wrapper">
+      <div class="panel">
+        <div class="aside">
+          <div class="avatar"><img src="/assets/img/ictlogo.png"  style="width: 120px;height: 120px;"/></div>
+          <div class="seperator"></div>
+          <div class="list">
+            <div class="item  "> <a id="links" routerLink="/admin">CREATED JOBS</a> </div> <br>
+            <div class="item "> <a id="links" routerLink="/admineligiblesubmissions">ELIGIBLE SUBMISSIONS</a> </div> <br>
+            <div class="item  "> <a id="links" routerLink="/empNewReg">EMPLOYER REQUEST</a> </div> <br> 
+            <div class="item "> <a id="links" routerLink="/facNewReg">FACULTY REQUEST</a> </div> <br> 
+             <div class="item selected"> <a id="links" routerLink="/alumniNewReg">ALUMNI REQUEST</a> </div>
+          </div>
+        
+        </div>
+        <div class="card">
+          <div class="card-header">
+              {{title}}
+          </div>
+          <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th>
+                                 
+                              </th>
+                              <th>Name</th>
+                              <th>Email</th>
+                              <th>Info</th>
+                              
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor='let i of alumni'>
+                              <td>
+                               <img  [src]='i.imgfile' 
+                               [title]='i.register'
+                               [style.width.px]='imageWidth'
+                               [style.margin.px]='imageMargin'></td>
+                               <td>{{i.name}}</td>
+                               <td>{{i.email}}</td>
+                               <td>{{i.info}}</td>
+                               <td >
+                                <button class="btn btn-light" style="cursor:pointer"   (click)="viewalumni(i)" style="margin-left: 20px;"> View</button>
+                                 
+                                </td>
+      
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+  
+        <div class="clear-fix"></div>
+      </div>
+    </div>
+    
+    <router-outlet></router-outlet>
+  

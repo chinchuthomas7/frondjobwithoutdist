@@ -1,0 +1,232 @@
+<script src="https://kit.fontawesome.com/7e3306a0d5.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7e3306a0d5.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="banner">
+    <div class="header">
+        <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Find the career you deserve<br><br></h2>
+        </div>
+</div><br>
+<!-- --------------------------------Icons with features-------------------- -->
+ <div class="container" style="color:black">
+      
+    <div class="row" style="color:black">
+     
+     <div class="col-sm-3" >
+        <div class="row" style="text-align:center">
+        <div class="col-sm-6">
+            <i class="fa fa-wpexplorer icons fa-vc"></i>
+         
+        </div> 
+        <div class="col-sm-6"><p class="card-text" style='font-family:sans-serif;'> Updated and easy access </p></div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-3" style="color:black">
+    <div class="row" style="text-align:center">
+    <div class="col-sm-6">
+        <i class="fa fa-briefcase icons fa-vc"></i>
+    
+    </div> 
+    <div class="col-sm-6">  <p class="card-text" style='font-family:sans-serif;'>   Large number of job openings</p></div>
+</div>
+</div>
+<div class="col-sm-3" style="color:black">
+    <div class="row" style="text-align:center">
+    <div class="col-sm-6">
+        <i class="fa fa-building icons fa-vc"></i>
+    
+    </div> 
+    <div class="col-sm-6">  <p class="card-text" style='font-family:sans-serif;'>More Registered companies</p></div>
+</div>
+</div>
+<div class="col-sm-3" style="color:black">
+    <div class="row" style="text-align:center">
+    <div class="col-sm-6">
+     <i class="fa fa-edit icons fa-vc"></i>
+    </div> 
+    <div class="col-sm-6">  <p style='font-family:sans-serif;'>  Highly skilled candidates </p></div>
+</div>
+</div>
+
+  </div> </div><br><br><br><br><br><br><br><br> 
+
+
+
+  
+
+
+
+<!-- --------------------------------Jobs-------------------- -->
+
+
+ <!-- <div class="Container"> -->
+   <div class="container ">
+     <div class="row"></div>
+    
+  <h5> RECENT JOBS</h5><br><br>
+ 
+<div class="row" style="margin-left: 100px;" >
+  <div class="col-sm-4" *ngFor='let job of jobs'>
+    <div class="card jobcard"  style="margin-right: 25px; padding-left: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">{{job.jobTitle}}</h5>
+        <h5 class="card-title" style="color:  #000;">{{job.companyName}}</h5><br>
+        <h6 class="card-title">Qualifications required :<i style="color: black;margin: 5px;"> {{job.qlfnItem}}</i></h6><br>
+        <h6 class="card-title"> Eligible batches :<i style="color: black;margin: 5px;">{{job.passItem}}</i> </h6><br>
+
+        <h6 class="card-text">Skills required :<i style="color: black;margin: 5px;">{{job.skillItem}}</i> </h6><br>
+        <h6 class="card-title">Application starts : <i style="color: black;margin: 5px;">{{job.startDate}}</i></h6><br>
+        <h6 class="card-title">Last date to apply : <i style="color: black;margin: 5px;">{{job.endDate}}</i></h6><br>
+        <br><a routerLink="indvpage" class="btn btn-primary" (click)=" getindvjobpage(job)">Read more</a>
+            
+    </div>
+
+     
+      </div>      
+      <br><br><br><br></div>
+    </div>
+     
+    </div>
+        
+  <br><br><br>
+      
+
+ <!-- --------------------------------Steps-------------------- -->
+
+<h5>EASY TO USE</h5><br><br>
+<div class="gallery" style= "background: #efefef;">
+  <div class="container" style= "background: #efefef;"><br><br>
+      
+    <div class="row" style= "background: #efefef;">
+        <div class="col-sm-4" style= "background: #efefef;"></div>
+    
+  
+      <div class="col-sm-2" style= "background: #efefef;">
+      <div class="card border-0" style="width: 10rem;background: #efefef;">
+        <h5></h5>
+        <a ><i class="fa fa-edit icons fa-vc step"></i></a><br>
+  
+     
+  
+        <h6>STEP I</h6>
+      <p class="card-text" style='font-family:sans-serif;'>Register with us</p>
+   </div>
+      </div>
+
+
+  <div class="col-sm-2">
+    <div class="card border-0" style="width: 10rem;background: #efefef;">
+      
+      <a  ><i class="fa fa-sign-in icons fa-vc step" aria-hidden="true"></i></a><br>
+      
+      <h6>STEP II</h6>
+    <p class="card-text" style='font-family:sans-serif;'>Sign In your account</p>
+</div><br><br>
+  </div>
+
+  <div class="col-sm-2" >
+    <div class="card border-0" style="width: 10rem;background: #efefef;">
+      <a > <i class="fa fa-rocket fa-vc  icons step"></i></a><br>
+      <h6>STEP 3</h6>
+
+    <p class="card-text" style='font-family:sans-serif;'>Upload your resume</p>
+</div>
+  </div> 
+  <div class="col-sm-2" style= "background: #efefef;"></div>
+    </div></div>
+<br>
+  
+</div>
+
+<br><br> 
+<!-- --------------------------------Companies-------------------- -->
+
+
+
+  
+
+
+<div class="container aside">
+  <br><br> 
+  <div class="row">
+  
+    <br><br><br> 
+    <br>
+    <h5>REGISTERED COMPANIES</h5><br><br>
+    <div class="row">
+     <div class="col-sm-2"></div>
+        <div class="col-sm-2" *ngFor="let employ of employer"><h5>{{employ.name}}</h5></div>
+       
+        
+      </div>
+    </div>
+  </div>
+  <br><br>
+      
+  <br><br><br><br><br><br><br><br> 
+
+
+
+<!-- --------------------------------connect-------------------- -->
+
+<div class="connect" style= "background: #efefef;"><br><br>
+<section class="footer_one  ">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-md-3 col-lg-5">
+        <div class="footer_apps_widget  ">
+          <h4>About Us</h4><br>
+          <p style="text-align: justify;">ICT Academy of Kerala is a Social Enterprise created  for imparting ICT skills to the youths of Kerala and improve their employability opportunities in the Industry. ICTAK Alumni job portal is an application dedicated for job seeking Alumni of ICTAK. This job portal helps   the jobseekers   finding   the   right   organization,   according   to   their   educational qualification, experience and their preferences.</p>
+      </div>
+  </div>
+        
+  <div class="col-sm-6 col-md-4 col-md-3 col-lg-1"></div>
+        <div class="col-sm-6 col-md-4 col-md-3 col-lg-4">
+          <div class="footer_program_widget  ">
+            <h4>Implemented by</h4><br>
+            <div class="logo-widget    ">
+              <img class="img-fluid" src="https://retail.ictkerala.org/pluginfile.php/1/theme_edumy/footerlogo1/1632114608/logo_ICT-Edited.png" alt="Paatshala"  style="width:100px;max-width:none!important;height:100px;max-height:none!important;" >
+           </div><br>
+           <div class="footer_social_widget mt15">
+            <ul>
+                <li class="list-inline-item"><a  target="_self"  (click)="goFacebook()"><i class="fa fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a  target="_self" (click)="goTwitter()"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a  target="_self" (click)="goInstagram()"><i class="fa fa-instagram"></i></a></li>
+                <!-- <li class="list-inline-item"><a  target="_self"  href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li class="list-inline-item"><a  target="_self"  href="#"><i class="fa fa-dribbble"></i></a></li> -->
+                <li class="list-inline-item"><a  target="_self" (click)="goGoogle()"><i class="fa fa-google"></i></a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
+          <div class="footer_contact_widget  ">
+            <h4>Contact US</h4><br>
+            ICT Academy of Kerala
+L-9, Thejaswini Building
+Technopark campus
+Karyavattom-695581
+Phone:7594051437
+          </div>
+        </div>
+       
+  </div>
+</div>
+ 
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+ 
+    
+    

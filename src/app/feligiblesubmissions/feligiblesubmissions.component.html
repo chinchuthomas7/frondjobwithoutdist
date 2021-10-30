@@ -1,0 +1,117 @@
+<!-- 
+
+
+<body>
+    <div class="background"></div>
+    <div class="body-wrapper">
+      <div class="panel">
+        <div class="aside">
+          <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png"/></div>
+          <div class="seperator"></div>
+          <div class="list">
+            <div class="item " routerLink="/faculty">PROFILE</div>
+            <div class="item "> <a id="links" routerLink="/fcreatedjobs">CREATED JOBS</a> </div> <br>
+            <div class="item selected"> <a id="links" routerLink="/feligiblesubmissions">ELIGIBLE SUBMISSIONS</a> </div>
+           
+          </div>
+        
+        </div>
+        <div class="container">
+          <div class="row" style="margin-left: 100px;">       
+            
+             <div class="main-title"> Eligible submissions</div><br> <br><br>
+             <div class="col-sm-6" *ngFor="let eligibleItem of eligibleItems">  
+            
+              <div class="card" style="width: 20rem;">
+              
+                <div class="card-body">
+                  <h5 class="card-title" style="color:black; height:20px; text-align:center;"> {{eligibleItem.jobtitle}} <br>Deadline: {{eligibleItem.enddate}}</h5>
+                 </div><br>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" style= "font-family:cursive; height:40px;">Candidate Name: {{eligibleItem.firstname}}{{eligibleItem.lastname}}</li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Qualififcation:{{eligibleItem.qualifications}}</li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Year of Passout :{{eligibleItem.passout}} </li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Experience :{{eligibleItem.experience}} </li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Skills:{{eligibleItem.skillone}}{{eligibleItem.skilltwo}}{{eligibleItem.skillthree}} </li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Phone Number :{{eligibleItem.phone}}</li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Email :{{eligibleItem.email}} </li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Gender:{{eligibleItem.gender}}</li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Resumelink:{{eligibleItem.resume}}</li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Resumefile:</li>
+                  <li class="list-group-item" style= "font-family:cursive;height:40px;">Onlinelink:{{eligibleItem.onlinelink}}</li> 
+
+                </ul>
+              
+                </div> 
+                <br> <br><br>
+             </div> 
+
+
+          <div class="min-seperator"></div>
+         
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+    </div>
+    <router-outlet></router-outlet> -->
+
+    <!-- new -->
+
+    <div class="background">
+      <div class="body-wrapper">
+        
+        <div class="panel">
+          <div class="aside">
+            <div class="avatar"><img [src]='facultyItem.imgfile'  style="width: 120px; border-radius: 55%;height: 120px;" /></div>
+            <div class="seperator"></div>
+            <div class="list">
+              <div class="item "> <a id="links" routerLink="/faculty">PROFILE</a> </div> <br>
+              <div class="item "> <a id="links" routerLink="/fcreatedjobs">CREATED JOBS</a> </div> <br>
+
+              <div class="item  selected"> <a id="links" routerLink="/feligiblesubmissions">ELIGIBLE SUBMISSIONS</a> </div>
+    
+            </div>
+          </div>
+           <div class="view"> 
+            <div class="sub-title"></div>
+            <div class="main-title"></div>
+            <div class="seperator"></div>
+             <div class="profile">
+              <div class="card" *ngFor="let eligibleItem of eligibleItems" >
+                  
+                  <br>
+                  <div class="card-body">
+                    <h6 class="card-title" style="text-align: center;"> {{eligibleItem.jobtitle}} <br></h6><br> <h6 style="color: white;text-align: center ;">  Deadline: <i style="color: white;">{{eligibleItem.enddate}}</i> </h6>
+                    <br>
+                  <h6 class="card-text">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" style='font-family:sans-serif; height:40px;'>Candidate Name: {{eligibleItem.firstname}}{{eligibleItem.lastname}}</li>
+                      <li class="list-group-item" style='font-family:sans-serif;height:40px;'>Qualififcation:{{eligibleItem.qualifications}}</li>
+                      <li class="list-group-item" style='font-family:sans-serif;height:40px;'>Year of Passout :{{eligibleItem.passout}} </li>
+                      <li class="list-group-item" style='font-family:sans-serif;height:40px;'>Experience :{{eligibleItem.experience}} </li>
+                      <li class="list-group-item" style='font-family:sans-serif;;height:40px;'>Skills:{{eligibleItem.skillone}}{{eligibleItem.skilltwo}}{{eligibleItem.skillthree}} </li>
+                      <li class="list-group-item" style='font-family:sans-serif;;height:40px;'>Phone Number :{{eligibleItem.phone}}</li>
+                      <li class="list-group-item" style='font-family:sans-serif;;height:40px;'>Email :{{eligibleItem.email}} </li>
+                      <li class="list-group-item" style='font-family:sans-serif;;height:40px;'>Gender:{{eligibleItem.gender}}</li>
+    
+                    </ul>
+                  </h6>
+                  <button class="btn btn-light" (click)="viewEligible(eligibleItem)">View</button>
+
+                  
+                  </div>
+                </div>
+     
+             </div>
+            <div class="min-seperator"></div>
+           
+          </div>
+          <div class="clear-fix"></div>
+        </div>
+      </div>
+    </div>
+      <router-outlet></router-outlet>
+    
+    
+    
+ 

@@ -1,0 +1,63 @@
+
+
+   
+
+ 
+
+ <!-- new -->
+
+ 
+ <div class="background">
+  <div class="body-wrapper">
+    
+    <div class="panel">
+      <div class="aside">
+        <div class="avatar"><img [src]='employerItem.imgfile'  style="width: 120px; border-radius: 55%;height: 120px;" /></div>
+        <div class="seperator"></div>
+        <div class="list">
+          <div class="item "> <a id="links" routerLink="/employer">PROFILE</a> </div> <br>
+          <div class="item "> <a id="links" routerLink="/ecreatedjobs">CREATED JOBS</a> </div> <br>
+          <div class="item  selected"> <a id="links" routerLink="/eeligiblesubmissions">ELIGIBLE SUBMISSIONS</a> </div>
+
+        </div>
+      </div>
+       <div class="view"> 
+        <div class="sub-title"></div>
+        <div class="main-title"></div>
+        <div class="seperator"></div>
+         <div class="profile">
+          <div class="card" *ngFor="let eligibleItem of eligibleItems" >
+              
+              <br>
+              <div class="card-body">
+                <h6 class="card-title" style="text-align: center;"> {{eligibleItem.jobtitle}} <br></h6><br> <h6 style="color: white;text-align: center ;">  Deadline: <i style="color: white;">{{eligibleItem.enddate}}</i> </h6>
+                <br>
+              <h6 class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" style='font-family:sans-serif;'>Candidate Name: {{eligibleItem.firstname}}{{eligibleItem.lastname}}</li><br>
+                  <li class="list-group-item" style='font-family:sans-serif;'>Qualififcation:{{eligibleItem.qualifications}}</li><br>
+                  <li class="list-group-item" style='font-family:sans-serif;'>Year of Passout :{{eligibleItem.passout}} </li><br>
+                  <li class="list-group-item" style='font-family:sans-serif;'>Experience :{{eligibleItem.experience}} </li><br>
+                  <li class="list-group-item" style='font-family:sans-serif;'>Skills:{{eligibleItem.skillone}}{{eligibleItem.skilltwo}}{{eligibleItem.skillthree}} </li><br>
+                  <li class="list-group-item" style='font-family:sans-serif;'>Phone Number :{{eligibleItem.phone}}</li><br>
+                  <li class="list-group-item" style='font-family:sans-serif;'>Email :{{eligibleItem.email}} </li><br>
+                  <li class="list-group-item" style='font-family:sans-serif;'>Gender:{{eligibleItem.gender}}</li><br>
+                </ul>
+              </h6>
+              <button class="btn btn-light" (click)="viewEligible(eligibleItem)">View</button>
+
+              
+              </div>
+            </div>
+ 
+         </div>
+        <div class="min-seperator"></div>
+       
+      </div>
+      <div class="clear-fix"></div>
+    </div>
+  </div>
+</div>
+  <router-outlet></router-outlet>
+
+

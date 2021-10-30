@@ -1,0 +1,132 @@
+
+
+<!---<div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" routerLink="home" id="links" >Jobsnet</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarNav"   aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" >
+        <ul class="navbar-nav mr-auto" style="float:right">
+         
+            <li class="nav-item" >
+              <a class="nav-link active"  id="links"aria-current="page"routerLink="/login">Login</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active"  id="links" aria-current="page" routerLink="/signup">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  id="links"aria-current="page" routerLink="/alumnisignup">Register as Alumni</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  id="links"aria-current="page" routerLink="/facultysignup">Register as Faculty</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  id="links"aria-current="page" routerLink="/employersignup">Register as Employer</a>
+            </li>
+          <li class="nav-item active">
+            <a class="nav-link" id="links" *ngIf="jobportal.loggedIn() && jobportal.adminIn()"routerLink="/admin">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="links"  *ngIf="jobportal.loggedIn() &&jobportal.alumniIn()" routerLink="/alumni" >Alumni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="links" *ngIf="jobportal.loggedIn() &&jobportal.facultyIn()" routerLink="/faculty" >Faculty</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="links"  *ngIf="jobportal.loggedIn() &&jobportal.employerIn()"  routerLink="/employer" >Employer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="links" *ngIf="jobportal.loggedIn() && jobportal.adminIn()" routerLink="/jobpost" >Post a Job</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="links" *ngIf="jobportal.loggedIn() && jobportal.employerIn()" routerLink="/jobpostemployer" >Post a Job</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="links" *ngIf="jobportal.loggedIn() && jobportal.facultyIn()" routerLink="/jobpostfaculty" >Post a Job</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="links" *ngIf="jobportal.loggedIn() && jobportal.alumniIn()" routerLink="/applicationForm" >Apply Job</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="links" routerLink="/indvpage" >Indv page</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" (click)= "logoutUser()"routerLink="/logout">Log Out</a>
+            </li>
+           
+         
+        </ul>
+           
+      </div>
+    </nav>
+</div>
+<div class="div2">
+
+</div> -->
+
+
+
+
+
+
+<nav class="navbar navbar-expand-md navbar-light">
+  <ul class="navbar-nav ms-auto">
+  <li class="nav-item active">
+    <a class="nav-link" routerLink="/home" style="color: antiquewhite;">JobsNet <span class="sr-only">(current)</span></a>
+</li>
+</ul>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+          
+          <li class="nav-item active" >
+              <a class="nav-link text-white" *ngIf="!jobportal.loggedIn()" routerLink="/login">Login</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active text-white"  id="navbarDropdownMenuLink" data-toggle="dropdown" *ngIf="!jobportal.loggedIn()" aria-haspopup="true" aria-expanded="false">
+                  Register As
+              </a>
+              <ul class="dropdown-menu bg-primary " aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item  active dropdown-content "  routerLink="/employersignup">Employer</a></li>
+                  <li><a class="dropdown-item active  dropdown-content"  routerLink="/facultysignup">Faculty</a></li>
+                  <li><a class="dropdown-item active  dropdown-content"  routerLink="/alumnisignup">Alumni</a>
+                    
+              </ul>
+          </li>
+         
+        <li class="nav-item active">
+          <a class="nav-link text-white" *ngIf="jobportal.loggedIn() && jobportal.adminIn()"routerLink="/admin">Admin</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-white" *ngIf="jobportal.loggedIn() &&jobportal.employerIn()"  routerLink="/employer">Employer</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link text-white"*ngIf="jobportal.loggedIn() &&jobportal.facultyIn()" routerLink="/faculty">Faculty</a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link text-white" *ngIf="jobportal.loggedIn() &&jobportal.alumniIn()" routerLink="/alumni">Alumni</a>
+</li>
+<li class="nav-item active">
+  <a class="nav-link text-white" *ngIf="jobportal.loggedIn() && jobportal.adminIn()" routerLink="/jobpost">Post a job</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link text-white" *ngIf="jobportal.loggedIn() && jobportal.employerIn()" routerLink="/jobpostemployer">Post a job</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link text-white" *ngIf="jobportal.loggedIn() && jobportal.facultyIn()" routerLink="/jobpostfaculty">Post a job</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link text-white" *ngIf="jobportal.loggedIn()" (click)= "logoutUser()"routerLink="/logout">Log Out</a>
+</li>
+      </ul>
+  </div>
+</nav>
+
+ 

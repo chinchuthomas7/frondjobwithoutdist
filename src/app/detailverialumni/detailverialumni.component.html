@@ -1,0 +1,110 @@
+<div class="banner"><br><br>
+    <div class="container">
+        <div class="col-lg-3"></div>
+        
+          <form  #confirmdeny="ngForm" (ngSubmit)="confirmalumni()">
+        <div class="col-lg-6 offset-lg-3" style="background:rgba(235, 232, 235, 0.748)">
+         <div class="row col-lg-12" style="background:#114350; margin:0%"><header style='font-family:sans-serif;'>Confirm or Deny request</header><br><br><br><br></div> 
+         
+          <div class="form-group" [class.is-invalid]="register.invalid && register.touched" ><div class="row">
+             <div class= "col-lg-3">
+                
+                <h6  style='font-family:sans-serif;color:#114350'>Requested as*</h6></div>
+                <!-- <div class= "col-lg-3">
+                   <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" readonly name="inlineRadioOptions" id="inlineRadio1" value="Employer" name="register" #register="ngModel" [(ngModel)]="alumniItems.register">
+                      <label class="form-check-label" for="inlineRadio1" style="color:#114350">Employer</label>
+                    </div></div> -->
+                    <!-- <div class= "col-lg-3">
+ 
+                      <div class="form-check form-check-inline">
+                         <input class="form-check-input" type="radio" readonly  name="inlineRadioOptions" id="inlineRadio2" value="Faculty" name="register" #register="ngModel" [(ngModel)]="alumniItems.register">
+                         <label class="form-check-label" for="inlineRadio2" style="color:#114350">Faculty</label>
+                       </div>
+                    </div> -->
+                    <div class= "col-lg-3">
+ 
+                      <div class="form-check form-check-inline">
+                         <input class="form-check-input" type="radio" readonly name="inlineRadioOptions" id="inlineRadio3" value="Alumni" name="register" #register="ngModel" [(ngModel)]="alumniItems.register">
+                         <label class="form-check-label" for="inlineRadio3" style="color:#114350">Alumni</label>
+                       </div><br>
+                       <div *ngIf="register.errors && register.touched" class="alert alert-danger" style="width:70%; margin-left: 40px;"> Please enter minimum3 characters
+                      </div><br>
+                      </div> <br></div>
+            
+             <div class="form-group"><br>
+ 
+                <input class="myInput form-control" type="text" placeholder="Name" readonly minlength="3" id="username1" #name="ngModel" name="name" style='font-family:sans-serif;' [(ngModel)]="alumniItems.name" [class.is-invalid]="name.invalid && name.touched">
+                <div *ngIf="name.errors && (name.dirty ||name.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px;">
+                    <div [hidden]="!name.errors.required" >
+                       Please enter a name
+                    </div>
+                    <div [hidden]="!name.errors.minlength">
+                       Please enter minimum3 characters
+                    </div>
+                 </div>
+ 
+                 <div class="form-group">
+                  <input  class="myInput form-control" name="email" readonly type="text" #email="ngModel"  pattern="^[a-z0-9.%]+@[a-z0-9.-]+\.[a-z]{2,4}"[(ngModel)]="alumniItems.email"placeholder="Email" id="email2"  style='font-family:sans-serif;'>
+                  <div *ngIf="email.errors && (email.dirty ||email.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px;">
+                    <div [hidden]="!email.errors.required" >
+                       Please reenter your Email
+                    </div>
+                    <div [hidden]="!email.errors.pattern">
+                       Please enter valid Email
+                    </div>
+                 </div>
+                <div>
+              </div>
+   
+              <div class="form-group">
+               <input class="myInput form-control" type="text" readonly placeholder="Phone Number (10 digit)" pattern="^\(?([0-9]{3})\)?[- ]?([0-9]{3})[- ]?([0-9]{4})" #phonenumber="ngModel" id="phonenumber" name="phonenumber" [(ngModel)]="alumniItems.phonenumber" style='font-family:sans-serif;'>
+          <div *ngIf="phonenumber.errors && (phonenumber.dirty ||phonenumber.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px;">
+            <div [hidden]="!phonenumber.errors.required" >
+               Please enter the phonenumber
+            </div>
+            <div [hidden]="!phonenumber.errors.pattern">
+               Use the following formats XXXXXXXXXX or XXX-XXX-XXXX or XXX XXX XXX
+            </div>
+         </div>
+        </div>
+         <div class="form-group"><div class="row">
+          
+             
+            </div><br>
+            <div class="form-group">
+               <div class="col-lg-12">
+                 
+                  <textarea style="margin:4%" placeholder="Enter more about you  here.."  id="textitems" name="info"  [(ngModel)]="alumniItems.info" readonly  class="form-control col'sm-6" rows="8" cols="35" style='font-family:sans-serif;'></textarea>
+                  <br>
+                     </div>
+            
+              
+              <div class="form-group">
+               <div class="col-md-5">
+                  <!-- <small >Upload the profile picture</small> -->
+                  <input type="file" (change)="onFileSelected($event)"  name="image" class="form-control col'sm-6" id="input" hidden accept="image/*" style='font-family:sans-serif;'>
+                  <!-- <small [class.d-none]="preview.dirty" style="font-family: cursive;color:whitesmoke">Upload image of book</small> -->
+                   <br>
+                    <img [src]="alumniItems.imgfile" id="preview">
+                     
+                   </div></div> 
+                   <input class="myInput form-control" type="hidden" value="" required id="username1" #status="ngModel" name="status" style='font-family:sans-serif;' [(ngModel)]="alumniItems.status" >
+                   <div *ngIf="name.errors && (name.dirty ||name.touched)" class="alert alert-danger" style="width:70%; margin-left: 40px;">
+                       <div [hidden]="!name.errors.required" >
+                          Please enter a name
+                       </div>
+                       <div [hidden]="!name.errors.minlength">
+                          Please enter minimum3 characters
+                       </div>
+                    </div>
+            <div class="form-group">
+                    <input type="submit" class="butt"  value="Confirm" [disabled]="clicked"   style='font-family:sans-serif;'><br><br>
+                    </div> 
+                     <form> <input type="submit" class="butt" (click) ="deleteAlumni(alumniItems)" value="Deny" style='font-family:sans-serif;'>
+                
+                     </form>  
+                <div  class="col-lg-3"></div>
+            
+            
+        

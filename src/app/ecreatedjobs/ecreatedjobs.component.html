@@ -1,0 +1,53 @@
+
+
+ 
+
+ <!-- new -->
+
+ 
+ <div class="background">
+  <div class="body-wrapper">
+    
+    <div class="panel">
+      <div class="aside">
+        <div class="avatar"><img [src]='employerItem.imgfile'  style="width: 120px; border-radius: 55%;height: 120px;" /></div>
+        <div class="seperator"></div>
+        <div class="list">
+          <div class="item  "> <a id="links" routerLink="/employer">PROFILE</a> </div> <br>
+          <div class="item selected"> <a id="links" routerLink="/appliedjobs"></a> CREATED JOBS</div> <br>
+          <div class="item "> <a id="links" routerLink="/eeligiblesubmissions">ELIGIBLE SUBMISSIONS</a> </div>
+
+        </div>
+      </div>
+       <div class="view"> 
+        <div class="sub-title"></div>
+        <div class="main-title"></div>
+        <div class="seperator"></div>
+         <div class="profile">
+          <div class="card" *ngFor="let jobemployer of jobemployers" >
+              <h5 class="card-header">{{jobemployer.jobTitle}}</h5>
+              <br>
+              <div class="card-body">
+                <h6 class="card-title">Job opening date: <h6 style="color: floralwhite; margin-left: 90px;">{{jobemployer.startDate}}</h6> </h6>
+                <br>
+                <h6 class="card-text">Last date to apply : <h6 style="color: floralwhite; margin-left: 90px;">{{jobemployer.endDate}}</h6> </h6>
+              <br>
+
+                <h6 class="card-text">Skills required : <h6 style="color: floralwhite; margin-left: 90px;">{{jobemployer.skillItem}} </h6> </h6>
+               <br>
+               
+               <button type="button" (click)="deleteJob(jobemployer)" class="btn btn-danger">Delete</button>
+              
+              </div>
+            </div>
+ 
+         </div>
+        <div class="min-seperator"></div>
+       
+      </div>
+      <div class="clear-fix"></div>
+    </div>
+  </div>
+</div>
+  <router-outlet></router-outlet>
+

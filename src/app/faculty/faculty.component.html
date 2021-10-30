@@ -1,0 +1,76 @@
+<!-- 
+
+<body>
+    <div class="background"></div>
+    <div class="body-wrapper">
+      <div class="panel">
+        <div class="aside">
+          <div class="avatar"><img [src]="facultyItem.imgfile"></div>
+          <div class="seperator"></div>
+          <div class="list">
+            <div class="item selected" routerLink="/faculty">PROFILE</div>
+            <div class="item "> <a id="links" routerLink="/fcreatedjobs">CREATED JOBS</a> </div> <br>
+            <div class="item "> <a id="links" routerLink="/feligiblesubmissions">ELIGIBLE SUBMISSIONS</a> </div>
+          </div>
+        
+        </div>
+        <div class="view">
+          <div class="sub-title">FACULTY DASHBOARD</div>
+          <div class="main-title">PROFILE</div>
+          <div class="seperator"></div>
+           <div class="profile">
+            <h5> <i>Welcome {{facultyItem.name}}</i> </h5>
+            <h5><i>Email:{{facultyItem.email}}</i></h5>
+            <h5><i>About:</i></h5>
+  
+           </div>
+          <div class="min-seperator"></div>
+         
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </body> -->
+
+  <!-- new -->
+
+  <div class="background">
+    <div class="body-wrapper">
+      
+      <div class="panel">
+        <div class="aside">
+          <div class="avatar"><img [src]="facultyItem.imgfile" style="width: 120px; border-radius: 55%;height: 120px;" /></div>
+          <div class="seperator"></div>
+          <div class="list">
+            <div class="item selected "> <a id="links"  routerLink="/faculty">PROFILE</a> </div> <br>
+            <div class="item "> <a id="links" routerLink="/fcreatedjobs">CREATED JOBS</a> </div> <br>
+            <div class="item "> <a id="links" routerLink="/feligiblesubmissions">ELIGIBLE SUBMISSIONS</a> </div>
+            
+          </div>
+        </div>
+         <div class="view"> 
+          <div class="sub-title"></div>
+          <div class="main-title"></div>
+          <div class="seperator"></div>
+           <div class="profile">
+             <h5 style="color: rgb(49, 51, 54);">{{facultyItem.name}}</h5> 
+            <br>
+<br>
+            <div class="about">
+            <h5  style="color: dodgerblue;">Email:  <h6 style="color: rgb(49, 51, 54);">{{facultyItem.email}}</h6></h5><br>
+
+            <h5 style="color: dodgerblue;">About:  
+              <h6 style="color: rgb(49, 51, 54);">{{facultyItem.info}}</h6>
+              </h5>
+              </div>
+   
+           </div>
+          <div class="min-seperator"></div>
+         
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+    </div>
+  </div>
+    <router-outlet></router-outlet>

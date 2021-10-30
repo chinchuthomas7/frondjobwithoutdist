@@ -1,0 +1,107 @@
+<!-- 
+
+
+
+
+
+<body>
+  <div class="background">
+  <div class="body-wrapper">
+    <div class="panel">
+      <div class="aside">
+        <div class="avatar"><img  [src]='alumniItem.imgfile' style="width: 120px; border-radius: 55%;height: 120px;"/></div>
+        <div class="seperator"></div>
+        <div class="list">
+          <div class="item " routerLink="/alumni">PROFILE</div>
+          <div class="item selected "> <a id="links" routerLink="/appliedjobs">APPLIED JOBS</a> </div>
+         
+        </div>
+      
+      </div>
+      
+      <div class="container">
+        <div class="row" style="margin-left: 100px;">       
+          
+          <div class="main-title"> <h5>Jobs applied </h5></div><br> <br><br>
+          <div class="col-sm-6" *ngFor="let apply of applied"> 
+          
+            <div class="card" style="width: 20rem;">
+            
+              
+                <h6 class="card-title" style="color:rgb(255, 255, 255); height:20px; text-align:center;">{{apply.jobtitle}}</h6>
+               
+              
+               
+                
+              
+                <h6  style= "font-family:cursive; height:40px;">You have applied for the post of <i>{{apply.jobtitle}}</i> for {{apply.companyname}} posted on {{apply.startdate}}</h6>
+                 
+                  
+             
+              
+             </div>  <br><br></div>  <br><br></div> <br><br>
+
+
+
+           <div class="min-seperator"></div>
+
+
+
+      <div class="clear-fix"></div>
+    </div>
+  <router-outlet></router-outlet> -->
+
+  
+
+
+ 
+
+   <!-- new -->
+
+
+   
+
+
+   <div class="background">
+    <div class="body-wrapper">
+      
+      <div class="panel">
+        <div class="aside">
+          <div class="avatar"><img  [src]='alumniItem.imgfile'  style="width: 120px; border-radius: 55%;height: 120px;" /></div>
+          <div class="seperator"></div>
+          <div class="list">
+            <div class="item  "> <a id="links" routerLink="/alumni">PROFILE</a> </div> <br>
+            <div class="item selected"> <a id="links" routerLink="/appliedjobs">APPLIED JOBS</a> </div> <br>
+           
+          </div>
+        </div>
+         <div class="view"> 
+          <div class="sub-title"></div>
+          <div class="main-title"></div>
+          <div class="seperator"></div>
+           <div class="profile">
+            <div class="card"  *ngFor="let apply of applied">
+                <h5 class="card-header">{{apply.jobtitle}}</h5>
+                <br>
+                <div class="card-body">
+                  <h6 class="card-title">You have applied for the post of {{apply.jobtitle}} for {{apply.companyname}} posted on {{apply.startdate}}</h6>
+                 
+                
+                 
+                 <!-- <button type="button"  class="btn btn-danger">Delete</button> -->
+                
+                </div>
+              </div>
+   
+           </div>
+          <div class="min-seperator"></div>
+         
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+    </div>
+  </div>
+    <router-outlet></router-outlet>
+
+     
+

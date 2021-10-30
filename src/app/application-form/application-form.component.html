@@ -1,0 +1,149 @@
+<div class="testbox">
+  <form #apply="ngForm" (ngSubmit)="applyVerify()" >
+   
+    <h6 class="top-info">Apply for the post of {{jobItem.jobTitle}} for  {{jobItem.companyName}}: Deadline{{jobItem.endDate}}</h6>
+    <div class="item">
+      
+        <!-- <input type="text" name="jobtitle" placeholder="jobtitle" class="form-control" [(ngModel)]="employee.jobtitle" #jobtitle="ngModel"   required/>
+        <input type="text" name="companyname" placeholder="Company Name" class="form-control" [(ngModel)]="employee.companyname"  #companyname="ngModel" required/> -->
+        <div class="item form-group">
+          <p for="bdate">Job posting date<span>*</span></p>
+          <i class="fas fa-calendar-alt"></i>
+          <input id="bdate" class="form-control" type="date"  name="startDate" [(ngModel)]="jobItem.startDate" #startDate="ngModel" readonly/>
+          <div class="item form-group">
+            <p for="bdate">Last date to apply for the job<span>*</span></p>
+            <input id="bdate" class="form-control" type="date" name="endDate" #endDate="ngModel"[(ngModel)]="jobItem.endDate" readonly />
+            <i class="fas fa-calendar-alt"></i>
+     
+     <br>
+     
+          <p>Name<span class="required">*</span></p>
+    
+      <div class="name-item form-group">
+     
+        <input type="text" name="firstname" placeholder="First" class="form-control" [(ngModel)]="employee.firstname" #firstname="ngModel"  [class.is-invalid]="firstname.invalid && firstname.touched" minlength="3" required/>
+        <input type="text" name="lastname" placeholder="Last" class="form-control" [(ngModel)]="employee.lastname" minlength="1" required/>
+        <small class="text-danger" [class.d-none]="firstname.valid || firstname.touched">enter valid name</small>
+      </div>  
+      
+    </div>
+    
+    <!-- contact details -->
+    <div class="contact-item">
+      <div class="item form-group">
+        <p>Email<span class="required">*</span></p>
+        <input type="text"  name="email" class="form-control" [(ngModel)]="employee.email" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$"
+        required/>
+        <small class="text-danger" [class.d-none]="email.valid || email.touched">enter valid email id</small>
+        </div>
+        <div class="item form-group">
+        <p>Phone<span class="required">*</span></p>
+        <input type="text"  name="phone" class="form-control" [(ngModel)]="employee.phone" #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"  required/>
+        <small class="text-danger" [class.d-none]="phone.valid || phone.touched">enter valid phone number</small>
+      </div>
+      </div>
+    <!--  experience  and passout-->
+    <div class="position-item">
+
+                         <!-- Experience -->
+<div class="item form-group">
+<p>Experience<span class="required">*</span></p>
+<input type="text" name="experience" class="form-control" [(ngModel)]="employee.experience" minlength="1" #experience="ngModel" pattern="^[0-9]" [class.is-invalid]="experience.invalid && experience.touched" required/>
+<small class="text-danger" [class.d-none]="experience.valid || experience.touched">enter your experience</small>
+</div>
+
+<!-- experience ends here -->
+      
+      
+        <div class="item form-group">
+          <p>Passout year<span class="required">*</span></p>
+          <input type="text"name="passout" class="form-control" [(ngModel)]="employee.passout" #passout="ngModel" pattern="^[0-9]{4}" [class.is-invalid]="passout.invalid && passout.touched"  maxlength="4">
+          <small class="text-danger" [class.d-none]="passout.valid || passout.touched">enter valid passout year</small>
+        </div>
+
+<br>
+    
+     <!-- gender -->
+     <div class="check">
+
+      <div class="question">
+      <p class="control-label">Gender<span class="required">*</span></p>
+      <div class="question-answer form-group" >
+        <div class="form-group" [class.has-error]="gender.touched && gender.invalid">
+          <input type="radio" value="female" id="radio_1" class="form-control" name="gender" #gender="ngModel"  [(ngModel)]="employee.gender"  required/>
+          <label for="radio_1" class="radio"><span>Female</span></label>
+        </div>
+        <div class="form-group" [class.has-error]="gender.touched && gender.invalid">
+          <input type="radio" value="male" id="radio_2" class="form-control" name="gender" #gender="ngModel" [(ngModel)]="employee.gender" required/>
+          <label for="radio_2" class="radio"><span>Male</span></label>
+        </div>
+        <div class="form-group" [class.has-error]="gender.touched && gender.invalid">
+          <input type="radio" value="others" class="form-control" id="radio_3" name="gender" #gender="ngModel"  [(ngModel)]="employee.gender"  required/>
+          <label for="radio_3" class="radio"><span>Others</span></label>
+        </div>
+        <small class="text-danger" *ngIf="gender.touched && gender.invalid">Gender is required</small>
+    </div>
+    </div>
+    </div>
+    <br>
+       <!-- gender ends -->
+
+       <div class="item form-group">
+        
+        <p>Highest Qualification<span class="required">*</span></p>
+        <select name="qualifications"  #qualifications="ngModel" [(ngModel)]="employee.qualifications" [class.is-invalid]="qualifications.invalid && qualifications.touched" required>
+          <option value="">--Select--</option>
+          <option value="Mtech">Mtech</option>
+          <option value="Msc">Msc</option>
+          <option value="MS">MS</option>
+          <option value="MCA">MCA</option>
+          <option value="MCOM">Mcom</option>
+          <option value="Btech">Btech</option>
+          <option value="Bsc">Bsc</option>
+          <option value="BCA">BCA</option>
+          <option value="Bcom">Bcom</option>
+          <option value="MBA">MBA</option>
+          <option value="BBA">BBA</option> 
+        
+        </select>
+        <small class="text-danger" [class.d-none]="qualifications.valid || qualifications.untouched">Please choose a qualification</small>
+      </div>
+      
+      <!-- passout year -->
+
+
+
+      </div>
+     
+    <br>
+    <!-- to enter skills -->
+      <p>Enter your skills<span class="required">*</span></p>
+
+    <div class="contact-item">
+  <div class="item form-group">
+    
+      <p>Skill 1:</p><input type="text" name="skillone" class="form-control" [(ngModel)]="employee.skillone" minlength="1"/>
+      <p>Skill 2:</p><input type="text" name="skilltwo" class="form-control" [(ngModel)]="employee.skilltwo" />
+      <p>Skill 3:</p><input type="text" name="skillthree" class="form-control" [(ngModel)]="employee.skillthree" />
+    </div>
+      <div class="item form-group">
+      <p>Skill 4:</p> <input type="text" name="skillfour" class="form-control" [(ngModel)]="employee.skillfour" />
+      <p>Skill 5:</p> <input type="text" name="skillfive" class="form-control" [(ngModel)]="employee.skillfive" />
+      <p>Skill 6:</p> <input type="text" name="skillsix" class="form-control" [(ngModel)]="employee.skillsix" />
+    </div>
+  
+</div>
+
+    <!-- to upload resume -->
+    <div class="item form-group">
+      <p>Submit your resume by providing your resume URL and  attach Pdf file of resume:<span class="required">*</span></p>
+      <input type="text" name="onlinelink" #onlinelink="ngModel" class="form-control" [(ngModel)]="employee.onlinelink"  />
+<input type="file" (change)="onFileSelected($event)" name="resumefile" accept=".pdf"  class="form-control">
+    </div>
+    <br>
+     <!-- button with animation -->
+     <div class="frame">
+      <button class="custom-btn btn-10" type="submit" id='submit' [disabled]="apply.form.invalid || resumefile==undefined" >APPLY</button>
+    </div>
+  
+</div>

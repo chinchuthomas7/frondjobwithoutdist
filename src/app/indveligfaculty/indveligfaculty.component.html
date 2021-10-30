@@ -1,0 +1,27 @@
+<div class="entire">
+  
+    <div class="description">
+      
+    <div class="card card-4"><br><br>
+    
+      <div class="about">
+       
+        <p  name="companyName"><b>Applied for the post of </b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{faceligItem.jobtitle}}</i></p>
+    
+       <p><b> Name of the candidate: </b><i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{faceligItem.firstname}} {{faceligItem.lastname}}</i> 
+        </p>
+  
+  <p  name="email"><b>Email: </b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{faceligItem.email}} </i>  </p>
+    <p  name="phone"><b>Phone number: </b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)"> {{faceligItem.phone}}  </i> </p>
+    <p  name="gender"><b>Gender: </b>  <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{faceligItem.gender}} </i> </p>
+    <p  name="qlfnItem"><b>Qualification of candidate:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{faceligItem.qualifications}} </i> </p>
+   
+    <p  name="passout year"><b>Year of passout:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{faceligItem.passout}}</i>  </p>
+    <p  name="experience"><b>Years of experience:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{faceligItem.experience}} </i>  </p>
+      <p name="Skills"><b>Skills:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)"></i>{{faceligItem.skillone}}{{faceligItem.skilltwo}}{{faceligItem.skillthree}}{{faceligItem.skillfour}} </p>
+      <!-- <p name="onlinelink"><b>Online link:</b><i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{faceligItem.onlinelink}}</i> </p>  -->
+      <button  class="btn btn-light" type="button" (click)="goToUrl()">Online link</button>
+      <button  class="btn btn-light" type="button" (click)="downloadfile()">Resume</button>
+       
+       <!-- <p name="resume"><b>Resume:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{faceligItem.resumefile}}</i> </p>  -->
+    </div>

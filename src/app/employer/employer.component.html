@@ -1,0 +1,43 @@
+
+
+  <!-- new -->
+
+  <div class="background">
+    <div class="body-wrapper">
+      
+      <div class="panel">
+        <div class="aside">
+          <div class="avatar"><img [src]='employerItem.imgfile' style="width: 120px; border-radius: 55%;height: 120px;" /></div>
+          <div class="seperator"></div>
+          <div class="list">
+            <div class="item selected "> <a id="links"  routerLink="/employer">PROFILE</a> </div> <br>
+            <div class="item "> <a id="links" routerLink="/ecreatedjobs">CREATED JOBS</a> </div> <br>
+            <div class="item "> <a id="links" routerLink="/eeligiblesubmissions">ELIGIBLE SUBMISSIONS</a> </div>
+            
+          </div>
+        </div>
+         <div class="view"> 
+          <div class="sub-title"></div>
+          <div class="main-title"></div>
+          <div class="seperator"></div>
+           <div class="profile">
+            <h5 style="color:rgb(49, 51, 54);">{{employerItem.name}} </h5>
+            <br>
+<br>
+            <div class="about">
+            <h5  style="color: dodgerblue;">Email:  <h6 style="color: rgb(49, 51, 54);">{{employerItem.email}}</h6></h5><br>
+
+            <h5 style="color: dodgerblue;">About {{employerItem.name}}:  
+              <h6 style="color: rgb(49, 51, 54);">{{employerItem.info}}</h6>
+              </h5>
+              </div>
+   
+           </div>
+          <div class="min-seperator"></div>
+         
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+    </div>
+  </div>
+    <router-outlet></router-outlet>

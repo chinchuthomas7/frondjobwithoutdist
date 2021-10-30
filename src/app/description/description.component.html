@@ -1,0 +1,77 @@
+
+<div class="entire">
+
+    <div class="description">
+    
+    <div class="card card-4">
+      <br>
+      <p   class="compname" name="companyName"> <br><i style="font-size:30px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">{{jobItem.companyName}}</i></p>
+    
+      <div class="about">
+        <p name="jobTitle"><b>Job Position:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(27, 90, 92);">{{jobItem.jobTitle}}</i> </p>
+        
+
+ <p  name="skillItem"><b>Essential skills: </b> <i style="font-style:italic;margin-left: 10px;color: rgb(27, 90, 92)">{{jobItem.skillItem}} </i></p>
+ 
+    <p  name="qlfnItem"><b>Qualification of candidates:</b><i style="font-style:italic;margin-left: 10px;color: rgb(27, 90, 92)"> {{jobItem.qlfnItem}}</i>  </p>
+    
+    <p  name="passItem"><b>Passout year of candidates looking for: </b> <i style="font-style:italic;margin-left: 10px;color: rgb(27, 90, 92)">{{jobItem.passItem}}</i>   </p>
+    <p  name="passItem"><b>Years of experience looking for: </b> <i style="font-style:italic;margin-left: 10px;color: rgb(27, 90, 92)">{{jobItem.experience}}</i>   </p>
+    <p name="companyinfor"><b>More about us:</b><i style="font-style:italic;margin-left: 10px;color: rgb(27, 90, 92)">{{jobItem.companyinfor}}</i> </p>
+      <p name="infor">
+        <b> Job Description:</b>
+        <i style="font-style:italic;margin-left: 10px;color: rgb(27, 90, 92)"> {{jobItem.infor}}</i>
+       
+      </p>
+
+      <p name="startDate"><b>Open from:</b> <i  style="font-style:italic;margin-left: 10px;color: rgb(74, 121, 122)">{{jobItem.startDate}}</i> </p>
+      <p name="endDate"><b>Last date to apply:</b> <i  style="font-style:italic;margin-left: 10px;color: rgb(74, 121, 122)"> {{jobItem.endDate}}</i> </p>
+    </div>
+    
+      
+   
+    
+   
+      
+   
+     <div class="frame">
+      <button class="custom-btn btn-10" *ngIf="jobportalservice.loggedIn() && jobportalservice.alumniIn()"> <a routerLink='/applicationForm' style="text-decoration: none;" > Apply Now </a></button>
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    <div class="list" *ngIf="jobportalservice.loggedIn() && jobportalservice.adminIn()" >
+    
+      <div class="card card-4">
+        <h4 style="color:black"><i>List of Applicants</i></h4>
+        
+        <div class='table-responsive'>
+          <table class='table' >
+            <tbody>
+              <tr  *ngFor='let apply of applied' > 
+                    <td><h5 style="text-decoration: none; color:black">{{apply.firstname}} {{apply.lastname}}</h5></td>
+                    <button class="custom-btn btn-8" routerLink="/verifyform" (click)="verifyapplied(apply)">Verify</button>
+                    
+                  
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      
+        
+    </div>
+    
+ 
+    
+ 
+    
+    
+    
+    
+    
+    
+    

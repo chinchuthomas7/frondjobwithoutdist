@@ -1,0 +1,26 @@
+<div class="entire">
+  
+    <div class="description">
+      
+    <div class="card card-4"><br><br>
+     
+    
+      <div class="about">
+       
+        <p  name="companyName"><b>Applied for the post of </b><i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{empeligItem.jobtitle}}</i> </p>
+       <p><b> Name of the candidate: </b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{empeligItem.firstname}} {{empeligItem.lastname}}</i>
+        </p>
+  
+  <p  name="email"><b>Email: </b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)"> {{empeligItem.email}} </i></p>
+    <p  name="phone"><b>Phone number: </b><i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{empeligItem.phone}} </i>  </p>
+    <p  name="gender"><b>Gender: </b><i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)"> {{empeligItem.gender}}</i>  </p>
+    <p  name="qlfnItem"><b>Qualification of candidate:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{empeligItem.qualifications}} </i> </p>
+   
+    <p  name="passout year"><b>Year of passout:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)"> {{empeligItem.passout}}</i> </p>
+    <p  name="experience"><b>Years of experience:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)"> {{empeligItem.experience}}</i> </p>
+      <p name="Skills"><b>Skills:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)"> {{empeligItem.skillone}}{{empeligItem.skilltwo}}{{empeligItem.skillthree}}{{empeligItem.skillfour}}</i></p>
+      <!-- <p name="Onlinelink"><b>Online link:</b><i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{empeligItem.onlinelink}}</i> </p>  -->
+      <button class="btn btn-light" type="button" (click)="goToUrl()">Online link</button>
+      <!-- <p name="resume"><b>Resume:</b> <i style="font-style:italic;margin-left: 10px;color: rgb(109, 225, 230)">{{empeligItem.resumefile}}</i> </p> -->
+      <button class="btn btn-light" type="button" (click)="downloadfile()">Resume</button>
+    </div>

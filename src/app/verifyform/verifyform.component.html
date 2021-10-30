@@ -1,0 +1,31 @@
+<div class="entire">
+  
+  <div class="description">
+    
+  <div class="card card-4">
+    
+  
+    <div class="about">
+      <h6  name="companyName"><b>Applied for the post of : </b> <i style="color: rgb(22, 105, 11);margin-left: 10px;">{{employee.jobtitle}}</i></h6>
+      <h6 name="jobTitle"><b>Organisation :</b> <i style="color: rgb(21, 95, 19);margin-left: 10px;">{{employee.companyname}}</i></h6>
+      <h6 name="infor"><b>
+  
+      Name of the candidate: </b> <i style="color:rgb(21, 95, 19);margin-left: 10px;">{{employee.firstname}} {{employee.lastname}}</i>
+      </h6>
+
+<h6  name="email"><b>Email: </b> <i style="color:rgb(21, 95, 19);margin-left: 10px;">{{employee.email}} </i></h6>
+  <h6  name="phone"><b>Phone number: </b><i style="color:rgb(21, 95, 19);margin-left: 10px;">{{employee.phone}}</i>   </h6>
+  <h6 name="gender"><b>Gender: </b><i style="color:rgb(21, 95, 19);margin-left: 10px;">{{employee.gender}} </i>  </h6>
+  <h6 name="qlfnItem"><b>Qualification of candidate:</b> <i style="color:rgb(21, 95, 19);margin-left: 10px;">{{employee.qualifications}} </i> </h6>
+ 
+  <h6 name="passout year"><b>Year of passout:</b> <i style="color:rgb(21, 95, 19);margin-left: 10px;">{{employee.passout}} </i> </h6>
+  <h6 name="experience"><b>Years of experience:</b>  <i style="color:rgb(21, 95, 19);margin-left: 10px;">{{employee.experience}} </i></h6>
+    <h6 name="Skills"><b>Skills:</b> <i style="color:rgb(21, 95, 19);margin-left: 10px;">{{employee.skillone}}{{employee.skilltwo}}{{employee.skillthree}}{{employee.skillfour}}</i></h6>
+    <input type="submit" class="btn btn-success"  [disabled]="clicked"  (click) ="applyVerify()" value="Forward"  style="font-family: cursive;">
+
+  </div>
+  </div>
+  </div>
+
+    
+ 

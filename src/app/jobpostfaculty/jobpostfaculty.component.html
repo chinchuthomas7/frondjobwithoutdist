@@ -1,0 +1,162 @@
+<br><br>
+<div class="testbox">
+    <form [formGroup]="reactiveForm" >
+      <div class="banner">
+        <h1>Post a job vacancy</h1>
+      </div>
+  
+  
+      <!-- Company name -->
+      <div class="item form-group">
+        <p for="comapny">Name of your company<span>*</span></p>
+        <input id="companyname" [ngClass] ="{'form-control':true,
+        'is-invalid':!companyname.valid && companyname.touched,
+        'is-valid':companyname.valid}" type="text" formControlName="companyName" [(ngModel)]="job.compname" />
+        <small class="text-danger" *ngIf="companyname.errors?.required && companyname.touched">Enter your company name</small>
+       
+      </div>
+      <!-- Company Name -->
+  
+  
+      <!-- job title -->
+      <div class="item form-group">
+        <p for="job">Job Title<span>*</span></p>
+        <input id="email" [ngClass] ="{'form-control':true,
+        'is-invalid':!jobtitle.valid && jobtitle.touched,
+        'is-valid':jobtitle.valid}" type="text" formControlName="jobTitle" [(ngModel)]="job.jbtitle"/>
+        <small class="text-danger" *ngIf="jobtitle.errors?.required && jobtitle.touched">Enter Job title</small>
+      </div>
+
+
+      <div class="item form-group">
+        <p for="email">Your registered Email<span>*</span></p>
+        <input id="email" class="form-control" type="text" formControlName="registeredEmail"[ngClass] ="{'form-control':true,
+        'is-invalid':!email.valid && email.touched,
+        'is-valid':email.valid}" [(ngModel)]="job.regemail" />
+        <small class="text-danger" *ngIf="email.errors?.required && email.touched">Enter your Email</small>
+        <small class="text-danger" *ngIf="email.errors?.pattern && email.touched">Enter your registered Email to get further updates</small>
+      </div>
+      <!-- job title -->
+      <div class="contact-item">
+        <div class="item form-group">
+          <p for="bdate">Job posting date<span>*</span></p>
+          <i class="fas fa-calendar-alt"></i>
+          <input id="bdate" class="form-control" type="date" formControlName="startDate" [(ngModel)]="job.stdate" [ngClass] ="{'form-control':true,
+          'is-invalid':!postdate.valid && postdate.touched,
+          'is-valid':postdate.valid}"/>
+          <small class="text-danger" *ngIf="postdate.errors?.required && postdate.touched">Enter the job posting date</small>
+         
+        </div>
+  
+  
+        <div class="item form-group">
+          <p for="bdate">Last date to apply for the job<span>*</span></p>
+          <input id="bdate" class="form-control" type="date" formControlName="endDate" [(ngModel)]="job.nddate" [ngClass] ="{'form-control':true,
+          'is-invalid':!enddate.valid && enddate.touched,
+          'is-valid':enddate.valid}" />
+          <i class="fas fa-calendar-alt"></i>
+          <small class="text-danger" *ngIf="enddate.errors?.required && enddate.touched">Enter the last date to apply for this post</small>
+        
+        </div>
+      </div>
+  
+  
+  
+    
+  
+      <!-- experience -->
+      <div class="item form-group">
+        <p for="comapny">Experience required<span>*</span></p>
+        <select formControlName="experience" [(ngModel)]="job.exp" >
+          <option selected [ngValue]='null'>Choose</option>
+          <option *ngFor="let item of experience" [value]="item" [ngClass] ="{'form-control':true,
+          'is-invalid':!experienced.valid && experienced.touched,
+          'is-valid':experienced.valid}"> {{item}}</option>
+        </select>
+        <small class="text-danger" *ngIf="experienced.errors?.required && experienced.touched">Enter years of experience required</small>
+
+        <!-- <small class="text-danger" [class.d-none]="experience.valid || experience.untouched">Please choose experience
+          required</small> -->
+      </div> 
+      
+        <!-- checking qualification -->
+
+        
+    <div class="item form-group" >
+      <div class="item">
+      <p class="checkbox">Qualification required<span>*</span></p>
+    <div class="input-checkbox" *ngFor="let control of qualificationArray.controls; let i = index;">
+        <input class="form-check" style="box-sizing: 2px;" [formControl] ="$any(control)" type="checkbox" id="inlineCheckbox{{i}}"  (change)="getselectedQualificationValues()"/>
+        <label  style="color: rgb(15, 15, 255);font-style: italic" class="form-check" style="padding: 2px;" for="inlineCheckbox{{i}}">{{qualification[i]}}</label>
+    
+     
+      </div><br>
+      <small class="text-danger" *ngIf= "favqualificationerror && checkfavqualificationcontroltouched()">Please choose atleast one qualification</small>
+    
+  </div>
+<!-------------------Passout -------------------------->
+
+
+<div class="item " >
+
+  <p class="checkbox">Passout Years required<span>*</span></p>
+<div class="input-checkbox" *ngFor="let control of passoutArray.controls; let i = index;">
+<input class="form-check" [formControl] ="$any(control)" type="checkbox" id="inlineCheckbox{{i}}"  (change)="getselectedPassoutValues()"/>
+<label  class="form-check" for="inlineCheckbox{{i}}">{{passoutyear[i]}}</label>
+
+
+</div><br>
+<small class="text-danger" *ngIf= "favpassouterror && checkfavpassoutcontroltouched()">Please choose atleast one passout year</small>
+
+</div>
+
+ <!-------------------Skills -------------------------->
+<div class="item">
+ <p class="checkbox">Skills required<span>*</span></p>
+ 
+ 
+<div class="input-checkbox"  *ngFor="let control of skillArray.controls; let i = index;">
+ <input class="form-check" [formControl] ="$any(control)" type="checkbox" id="inlineCheckbox{{i}}"  (change)="getselectedSkillValues()"/> 
+
+ <label  class="form-check" for="inlineCheckbox{{i}}">{{skills[i]}}</label>
+
+
+</div><br>
+<small class="text-danger" *ngIf= "favskillerror && checkfavskillcontroltouched()">Please choose the skills required</small>
+
+<!-- end of checkbox -->
+  
+  
+    
+
+
+
+<!--------------------NB-------------------------->
+
+  
+      <!-- About your company -->
+  
+    
+   <div class="item form-group">
+    <p for="comment">Describe about this job position</p>
+    <textarea id="comment" name="details"  class="form-control" rows="3"  [ngClass] ="{'form-control':true,
+    'is-invalid':!information.valid && information.touched,
+    'is-valid':information.valid}" type="text" formControlName="infor" [(ngModel)]="job.info"   required></textarea>
+  </div>
+  <small class="text-danger" *ngIf="information.errors?.required && information.touched">Enter your company name</small>
+      <!-- button with animation -->
+
+
+      <div class="item form-group">
+        <p for="comment">About your company</p>
+        <textarea id="comment" name="info" class="form-control"  rows="3"  [(ngModel)]="job.companyinfo"  [ngClass] ="{'form-control':true,
+        'is-invalid':!companyinformation.valid && companyinformation.touched,
+        'is-valid':companyinformation.valid}"  formControlName="companyinfor" required ></textarea>
+      </div> 
+      <small class="text-danger" *ngIf="companyinformation.errors?.required && companyinformation.touched">Enter more about the company</small>
+
+      <div class="frame">
+        <button class="custom-btn btn-3" (click)="submitHandler()" type="submit">Post this job</button>
+      </div></div></div>
+   
+ 

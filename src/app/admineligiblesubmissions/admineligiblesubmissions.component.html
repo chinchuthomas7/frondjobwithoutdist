@@ -1,0 +1,67 @@
+ 
+
+  
+
+
+<!-- new -->
+
+
+
+
+ <div class="background">
+  <div class="body-wrapper">
+    <div class="panel">
+      <div class="aside">
+        <div class="avatar"><img src="/assets/img/ictlogo.png"  style="width: 120px;height: 120px;"></div>
+        <div class="seperator"></div>
+        <div class="list">
+          <div class="item "> <a id="links" routerLink="/admin">CREATED JOBS</a> </div> <br>
+          <div class="item selected"> <a id="links" routerLink="/admineligiblesubmissions">ELIGIBLE SUBMISSIONS</a> </div> <br>
+          <div class="item "> <a id="links" routerLink="/empNewReg">EMPLOYER REQUEST</a> </div> <br> 
+          <div class="item "> <a id="links" routerLink="/facNewReg">FACULTY REQUEST</a> </div> <br> 
+           <div class="item "> <a id="links" routerLink="/alumniNewReg">ALUMNI REQUEST</a> </div>
+         
+        </div>
+      
+      </div>
+      <div class="view">
+        <div class="sub-title"></div>
+        <div class="main-title"></div>
+        <div class="seperator"></div>
+         <div class="profile">
+          <div class="card" *ngFor="let eligibleItem of eligibleItems">
+    
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">{{eligibleItem.jobtitle}} </h5><br> <h6 style="color: white;text-align: center ;">  Deadline: <i style="color: white;">{{eligibleItem.enddate}}</i> </h6><br>
+
+                <h6 class="card-text">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style='font-family:sans-serif;'>Candidate Name: <i style="color: rgb(39, 114, 51);font-size: 14px;">{{eligibleItem.firstname}}{{eligibleItem.lastname}}</i> </li><br>
+                    <li class="list-group-item" style='font-family:sans-serif;'>Qualififcation: <i style="color: rgb(39, 114, 51);font-size: 14px;">{{eligibleItem.qualifications}}</i></li><br>
+                    <li class="list-group-item" style='font-family:sans-serif;'>Year of Passout : <i style="color: rgb(39, 114, 51);font-size: 14px;">{{eligibleItem.passout}} </i></li><br>
+                    <li class="list-group-item" style='font-family:sans-serif;'>Experience : <i style="color: rgb(39, 114, 51);font-size: 14px;">{{eligibleItem.experience}}</i> </li><br>
+                    <li class="list-group-item" style='font-family:sans-serif;'>Skills: <i style="color: rgb(39, 114, 51);font-size: 14px;">{{eligibleItem.skillone}}{{eligibleItem.skilltwo}}{{eligibleItem.skillthree}}</i> </li><br>
+                    <li class="list-group-item" style='font-family:sans-serif;'>Phone Number : <i style="color: rgb(39, 114, 51);font-size: 14px;">{{eligibleItem.phone}}</i></li><br>
+                    <li class="list-group-item" style='font-family:sans-serif;'>Email : <i style="color: rgb(39, 114, 51);font-size: 14px;">{{eligibleItem.email}} </i></li><br>
+                    <li class="list-group-item" style='font-family:sans-serif;'>Gender: <i style="color: rgb(39, 114, 51);font-size: 14px;">{{eligibleItem.gender}}</i></li><br>
+          
+                    
+  
+                  </ul>
+                </h6>
+               <button class="btn btn-light" (click)="viewEligible(eligibleItem)">View</button>
+              </div>
+            </div>
+
+         </div>
+       
+       
+      </div>
+      <div class="clear-fix"></div>
+    </div>
+  </div>
+</div>
+  <router-outlet></router-outlet> 
+
+
+
